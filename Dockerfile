@@ -13,17 +13,3 @@ RUN \
   apt-get update && \
   apt-get -y upgrade && \
   rm -rf /var/lib/apt/lists/*
-
-# Add files.
-ADD root/.bashrc /root/.bashrc
-ADD root/.gitconfig /root/.gitconfig
-ADD root/.scripts /root/.scripts
-
-# Set environment variables.
-ENV HOME /root
-
-# Define working directory.
-WORKDIR /root
-
-# Define default command.
-CMD ["bash"]
